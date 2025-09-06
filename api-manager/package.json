@@ -1,0 +1,19 @@
+{
+  "name": "@vinz86/api-manager",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "vitest": "^0.35.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}
