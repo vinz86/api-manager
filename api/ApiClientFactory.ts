@@ -9,7 +9,7 @@ type ClientConstructor = { new (apiBaseUrl?: string): IHttpClient; }
 const clientMap: Record<EApiHttpClientType, IClientConstructor> = {
     [EApiHttpClientType.Fetch]: FetchClient,
     [EApiHttpClientType.OFetch]: OFetchClient,
-    [EApiHttpClientType.Axios]: AxiosClient,
+    [EApiHttpClientType.Axios]: FetchClient,
 };
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class

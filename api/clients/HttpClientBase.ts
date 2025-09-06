@@ -1,8 +1,8 @@
-import type { IHttpClient } from '../models/interface/IHttpClient';
-import type { IApiRequest } from '../models/interface/IApiRequest';
-import type { IApiResponse } from '../models/interface/IApiResponse';
-import type { TApiError } from '../models/type/TApiError';
-import { EApiResponseType } from '../models/enum/EApiResponseType';
+import type { IHttpClient } from '../../models/interface/IHttpClient';
+import type { IApiRequest } from '../../models/interface/IApiRequest';
+import type { IApiResponse } from '../../models/interface/IApiResponse';
+import type { TApiError } from '../../models/type/TApiError';
+import { EApiResponseType } from '../../models/enum/EApiResponseType';
 
 export abstract class HttpClientBase implements IHttpClient {
     protected apiBaseUrl: string;
