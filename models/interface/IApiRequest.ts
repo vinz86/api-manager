@@ -1,4 +1,4 @@
-import type {EApiResponseType} from "./../enum/EApiResponseType";
+import type {EApiResponseType} from "../enum/EApiResponseType";
 
 export interface IApiRequest {
     method: string;
