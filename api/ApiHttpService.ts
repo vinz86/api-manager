@@ -1,4 +1,6 @@
-import type { IApiRequest, IApiResponse, THttpServiceConfig } from "~/layers/api-manager";
+import type { IApiRequest } from "../models/interface/IApiRequest";
+import type { IApiResponse } from "../models/interface/IApiResponse";
+import type { THttpServiceConfig } from "../models/type/THttpServiceConfig";
 import { Api, ApiClient } from "~/layers/api-manager";
 import {serializeParams} from "./ApiUtils";
 

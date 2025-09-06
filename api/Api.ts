@@ -1,4 +1,6 @@
-import type {IServiceConfig, TServiceFactoryType, TAsyncServiceFactory} from "~/layers/api-manager";
+import type { IServiceConfig } from '../models/interface/IServiceConfig';
+import type { TServiceFactoryType } from '../models/type/TServiceFactoryType';
+import type { TAsyncServiceFactory } from '../models/type/TAsyncServiceFactory';
 
 interface ServiceEntry {
   factory: TServiceFactoryType<any>;

@@ -1,7 +1,10 @@
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import axios from 'axios';
 import { HttpClientBase } from './HttpClientBase';
-import type { IApiRequest, IApiResponse, TApiError, EApiResponseType } from '~/layers/api-manager';
+import type { IApiRequest } from '../models/interface/IApiRequest';
+import type { IApiResponse } from '../models/interface/IApiResponse';
+import type { TApiError } from '../models/type/TApiError';
+import { EApiResponseType } from '../models/enum/EApiResponseType';
 
 export class AxiosClient extends HttpClientBase {
     private axiosInstance: AxiosInstance;

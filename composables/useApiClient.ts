@@ -1,6 +1,6 @@
 import { ApiClient } from "~/layers/api-manager/api/ApiClient";
 import { useApiErrorHandler} from "#layers/api-manager/composables/useApiErrorHandler";
-import type { IApiRequest } from "~/layers/api-manager";
+import type { IApiRequest } from "../models/interface/IApiRequest";
 
 export const useApiClient = (instanceKey: string = 'default') => {
     const { handleError } = useApiErrorHandler();

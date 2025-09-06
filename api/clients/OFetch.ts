@@ -1,8 +1,11 @@
 import type { FetchError, FetchResponse } from 'ofetch';
 import { ofetch } from 'ofetch';
 import { HttpClientBase } from './HttpClientBase';
-import {EApiAuthType, type IApiRequest, type IApiResponse, type TApiError} from '~/layers/api-manager';
-import type { EApiResponseType} from "#layers/api-manager";
+import { EApiAuthType } from '../models/enum/EApiAuthType';
+import type { IApiRequest } from '../models/interface/IApiRequest';
+import type { IApiResponse } from '../models/interface/IApiResponse';
+import type { TApiError } from '../models/type/TApiError';
+import type { EApiResponseType} from "../models/enum/EApiResponseType";
 import {useAuthStore} from "~/stores/authStore";
 
 export class OFetchClient extends HttpClientBase {

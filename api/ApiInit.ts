@@ -1,4 +1,7 @@
-import type { EApiHttpClientType, EApiAuthType, TServiceEntry, EApiEnvironment} from "~/layers/api-manager";
+import type { EApiHttpClientType } from "../models/enum/EApiHttpClientType";
+import type { EApiAuthType } from "../models/enum/EApiAuthType";
+import type { EApiEnvironment } from "../models/enum/EApiEnvironment";
+import type { TServiceEntry } from "../models/type/TServiceEntry";
 import { Api, ApiClient, ApiHttpService } from "~/layers/api-manager";
 
 export class ApiInit {

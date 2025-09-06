@@ -1,6 +1,13 @@
 import { useApiCache } from "../composables/useApiCache";
-import type { IHttpClient, IApiResponse, IApiClient, EApiEnvironment, EApiHttpClientType, IApiRequest } from '~/layers/api-manager';
-import { ApiClientFactory, EApiAuthType } from '~/layers/api-manager';
+import type { IHttpClient } from '../models/interface/IHttpClient';
+import type { IApiResponse } from '../models/interface/IApiResponse';
+import type { IApiClient } from '../models/interface/IApiClient';
+import type { IApiRequest } from '../models/interface/IApiRequest';
+import { EApiEnvironment } from '../models/enum/EApiEnvironment';
+import { EApiHttpClientType } from '../models/enum/EApiHttpClientType';
+import { EApiAuthType } from '../models/enum/EApiAuthType';
+
+import { ApiClientFactory } from '~/layers/api-manager';
 import { getApiToken } from "./ApiUtils";
 
 export class ApiClient implements IApiClient {

@@ -1,6 +1,9 @@
 import {HttpClientBase} from "./HttpClientBase";
-import {EApiAuthType, type IApiRequest, type IApiResponse, type TApiError} from "~/layers/api-manager";
-import {EApiResponseType} from "~/layers/api-manager";
+import { EApiAuthType } from "../models/enum/EApiAuthType";
+import { EApiResponseType } from "../models/enum/EApiResponseType";
+import type { IApiRequest } from "../models/interface/IApiRequest";
+import type { IApiResponse } from "../models/interface/IApiResponse";
+import type { TApiError } from "../models/type/TApiError";
 import {useAuthStore} from "~/stores/authStore";
 
 export class FetchClient extends HttpClientBase {
