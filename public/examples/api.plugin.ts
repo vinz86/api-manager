@@ -2,7 +2,7 @@
 
 import {defineNuxtPlugin} from '#app';
 // import layer
-import {ApiInit} from "~/layers/api-manager/services/api/ApiInit";
+import {Api, ApiInit} from "#layers/api-manager";
 import {EApiHttpClientType} from "~/layers/api-manager/models/enum/EApiHttpClientType";
 import {EApiAuthType} from "~/layers/api-manager/models/enum/EApiAuthType";
 import type {TServiceEntry} from "~/layers/api-manager/models/type/TServiceEntry";
@@ -12,13 +12,14 @@ import {useConfig} from "~/composables/useConfig/useConfig";
 import {PostService} from "~/services/implementations/PostService";
 import {MockPostService} from "~/services/implementations/MockPostService";
 import {AuthService} from "~/services/implementations/AuthService";
+import type {IFolderReaderService} from "~/services/interfaces/IFolderReaderService";
+import type {IPostService} from "~/services/interfaces/IPostService";
 
 export default defineNuxtPlugin(nuxtApp => {
 
     const serviceKeys: TServiceEntry[] = [
         { key: ApiKeys.PostService, service: PostService },
         { key: ApiKeys.MockPostService, service: MockPostService },
-        { key: ApiKeys.AuthService, service: AuthService },
     ]
 
     const config = useConfig();
@@ -29,6 +30,12 @@ export default defineNuxtPlugin(nuxtApp => {
     const apiBaseUrl: string = config.getApiBase();
     const apiInstance = new ApiInit(client, timeout, authType, serviceKeys, instanceKey, apiBaseUrl);
 
+
+    //===============================================================//
+    // utilizzo
+    const postService = Api.getService<IPostService>(ApiKeys.PostService);
+    const posts = postService.getPost(123);
     // per esporre l'istanza di ApiInit all'interno dell'applicazione
-    nuxtApp.provide('api', apiInstance);
+    //nuxtApp.provide('api', apiInstance);
+
 });
